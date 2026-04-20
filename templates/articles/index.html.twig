@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des articles{% endblock %}
+
+{% block body %}
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="mb-1">Liste des articles</h1>
+            <p class="text-muted mb-0">TP4 Doctrine ORM et opérations CRUD</p>
+        </div>
+        <a href="{{ path('article_new') }}" class="btn btn-primary">Ajouter un article</a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-striped mb-0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prix</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for article in articles %}
+                        <tr>
+                            <td>{{ article.id }}</td>
+                            <td>{{ article.nom }}</td>
+                            <td>{{ article.prix }}</td>
+                            <td class="text-end">
+                                <a href="{{ path('article_show', {'id': article.id}) }}" class="btn btn-sm btn-outline-secondary">Voir</a>
+                                <a href="{{ path('article_edit', {'id': article.id}) }}" class="btn btn-sm btn-outline-primary">Modifier</a>
+                                <form method="post" action="{{ path('article_delete', {'id': article.id}) }}" class="d-inline">
+                                    <input type="hidden" name="_token" value="{{ csrf_token('delete_article_' ~ article.id) }}">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Supprimer cet article ?');">Supprimer</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="4" class="text-center py-4 text-muted">Aucun article trouvé.</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

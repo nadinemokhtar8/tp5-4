@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail article{% endblock %}
+
+{% block body %}
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h1 class="h3 mb-4">Détail de l'article</h1>
+
+            <dl class="row mb-4">
+                <dt class="col-sm-3">ID</dt>
+                <dd class="col-sm-9">{{ article.id }}</dd>
+
+                <dt class="col-sm-3">Nom</dt>
+                <dd class="col-sm-9">{{ article.nom }}</dd>
+
+                <dt class="col-sm-3">Prix</dt>
+                <dd class="col-sm-9">{{ article.prix }}</dd>
+            </dl>
+
+            <div class="d-flex gap-2">
+                <a href="{{ path('article_index') }}" class="btn btn-secondary">Retour</a>
+                <a href="{{ path('article_edit', {'id': article.id}) }}" class="btn btn-primary">Modifier</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

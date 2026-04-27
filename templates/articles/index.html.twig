@@ -10,6 +10,22 @@
         <a href="{{ path('article_new') }}" class="btn btn-primary">Ajouter un article</a>
     </div>
 
+    <div class="row mb-4">
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="h5 mb-3">Recherche par nom</h2>
+                    {{ form_start(form) }}
+                        <div class="input-group">
+                            {{ form_widget(form.nom) }}
+                            <button type="submit" class="btn btn-primary">Rechercher</button>
+                        </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="card shadow-sm">
         <div class="card-body p-0">
             <table class="table table-striped mb-0">

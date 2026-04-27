@@ -107,6 +107,31 @@ class __TwigTemplate_0e8ab371a372ab31c8561c078e884e52 extends Template
         yield "\" class=\"btn btn-primary\">Ajouter un article</a>
     </div>
 
+    <div class=\"row mb-4\">
+        <div class=\"col-lg-6\">
+            <div class=\"card shadow-sm\">
+                <div class=\"card-body\">
+                    <h2 class=\"h5 mb-3\">Recherche par nom</h2>
+                    ";
+        // line 18
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), 'form_start');
+        yield "
+                        <div class=\"input-group\">
+                            ";
+        // line 20
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), "nom", [], "any", false, false, false, 20), 'widget');
+        yield "
+                            <button type=\"submit\" class=\"btn btn-primary\">Rechercher</button>
+                        </div>
+                    ";
+        // line 23
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), 'form_end');
+        yield "
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class=\"card shadow-sm\">
         <div class=\"card-body p-0\">
             <table class=\"table table-striped mb-0\">
@@ -121,45 +146,45 @@ class __TwigTemplate_0e8ab371a372ab31c8561c078e884e52 extends Template
                 </thead>
                 <tbody>
                     ";
-        // line 26
+        // line 42
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 26, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 42, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 27
+            // line 43
             yield "                        <tr>
                             <td>";
-            // line 28
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 28), "html", null, true);
+            // line 44
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 44), "html", null, true);
             yield "</td>
                             <td>";
-            // line 29
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["article"], "nom", [], "any", false, false, false, 29), "html", null, true);
+            // line 45
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["article"], "nom", [], "any", false, false, false, 45), "html", null, true);
             yield "</td>
                             <td>";
-            // line 30
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["article"], "prix", [], "any", false, false, false, 30), "html", null, true);
+            // line 46
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["article"], "prix", [], "any", false, false, false, 46), "html", null, true);
             yield "</td>
                             <td>";
-            // line 31
-            yield (((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["article"], "category", [], "any", false, false, false, 31)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) ? ($this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["article"], "category", [], "any", false, false, false, 31), "titre", [], "any", false, false, false, 31), "html", null, true)) : ("Aucune"));
+            // line 47
+            yield (((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["article"], "category", [], "any", false, false, false, 47)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) ? ($this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["article"], "category", [], "any", false, false, false, 47), "titre", [], "any", false, false, false, 47), "html", null, true)) : ("Aucune"));
             yield "</td>
                             <td class=\"text-end\">
                                 <a href=\"";
-            // line 33
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 33)]), "html", null, true);
+            // line 49
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 49)]), "html", null, true);
             yield "\" class=\"btn btn-sm btn-outline-secondary\">Voir</a>
                                 <a href=\"";
-            // line 34
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 34)]), "html", null, true);
+            // line 50
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 50)]), "html", null, true);
             yield "\" class=\"btn btn-sm btn-outline-primary\">Modifier</a>
                                 <form method=\"post\" action=\"";
-            // line 35
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 35)]), "html", null, true);
+            // line 51
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 51)]), "html", null, true);
             yield "\" class=\"d-inline\">
                                     <input type=\"hidden\" name=\"_token\" value=\"";
-            // line 36
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete_article_" . CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 36))), "html", null, true);
+            // line 52
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete_article_" . CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 52))), "html", null, true);
             yield "\">
                                     <button type=\"submit\" class=\"btn btn-sm btn-outline-danger\" onclick=\"return confirm('Supprimer cet article ?');\">Supprimer</button>
                                 </form>
@@ -168,9 +193,9 @@ class __TwigTemplate_0e8ab371a372ab31c8561c078e884e52 extends Template
                     ";
             $context['_iterated'] = true;
         }
-        // line 41
+        // line 57
         if (!$context['_iterated']) {
-            // line 42
+            // line 58
             yield "                        <tr>
                             <td colspan=\"5\" class=\"text-center py-4 text-muted\">Aucun article trouve.</td>
                         </tr>
@@ -179,7 +204,7 @@ class __TwigTemplate_0e8ab371a372ab31c8561c078e884e52 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['article'], $context['_parent'], $context['_iterated']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 46
+        // line 62
         yield "                </tbody>
             </table>
         </div>
@@ -215,7 +240,7 @@ class __TwigTemplate_0e8ab371a372ab31c8561c078e884e52 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  183 => 46,  174 => 42,  172 => 41,  162 => 36,  158 => 35,  154 => 34,  150 => 33,  145 => 31,  141 => 30,  137 => 29,  133 => 28,  130 => 27,  125 => 26,  106 => 10,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  208 => 62,  199 => 58,  197 => 57,  187 => 52,  183 => 51,  179 => 50,  175 => 49,  170 => 47,  166 => 46,  162 => 45,  158 => 44,  155 => 43,  150 => 42,  128 => 23,  122 => 20,  117 => 18,  106 => 10,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -230,6 +255,22 @@ class __TwigTemplate_0e8ab371a372ab31c8561c078e884e52 extends Template
             <h1 class=\"mb-1\">Liste des articles</h1>
         </div>
         <a href=\"{{ path('article_new') }}\" class=\"btn btn-primary\">Ajouter un article</a>
+    </div>
+
+    <div class=\"row mb-4\">
+        <div class=\"col-lg-6\">
+            <div class=\"card shadow-sm\">
+                <div class=\"card-body\">
+                    <h2 class=\"h5 mb-3\">Recherche par nom</h2>
+                    {{ form_start(form) }}
+                        <div class=\"input-group\">
+                            {{ form_widget(form.nom) }}
+                            <button type=\"submit\" class=\"btn btn-primary\">Rechercher</button>
+                        </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class=\"card shadow-sm\">

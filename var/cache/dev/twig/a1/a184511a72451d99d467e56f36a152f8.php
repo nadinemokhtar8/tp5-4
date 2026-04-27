@@ -51,19 +51,37 @@ class __TwigTemplate_014a2ba2192885c61ede016737d8c43e extends Template
         // line 3
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_index");
         yield "\">Gestion Articles</a>
-        <div class=\"navbar-nav\">
-            <a class=\"nav-link\" href=\"";
-        // line 5
+        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#main-nav\" aria-controls=\"main-nav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+            <span class=\"navbar-toggler-icon\"></span>
+        </button>
+        <div class=\"collapse navbar-collapse\" id=\"main-nav\">
+            <div class=\"navbar-nav me-auto\">
+                <a class=\"nav-link\" href=\"";
+        // line 9
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_index");
         yield "\">Accueil</a>
-            <a class=\"nav-link\" href=\"";
-        // line 6
+                <a class=\"nav-link\" href=\"";
+        // line 10
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_new");
         yield "\">Nouvel article</a>
-            <a class=\"nav-link\" href=\"";
-        // line 7
+                <a class=\"nav-link\" href=\"";
+        // line 11
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("new_category");
         yield "\">Ajouter categorie</a>
+                <div class=\"nav-item dropdown\">
+                    <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Rechercher</a>
+                    <ul class=\"dropdown-menu\">
+                        <li><a class=\"dropdown-item\" href=\"";
+        // line 15
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_search_category");
+        yield "\">Par categorie</a></li>
+                        <li><a class=\"dropdown-item\" href=\"";
+        // line 16
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_search_price");
+        yield "\">Par prix</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
@@ -98,7 +116,7 @@ class __TwigTemplate_014a2ba2192885c61ede016737d8c43e extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  65 => 7,  61 => 6,  57 => 5,  52 => 3,  48 => 1,);
+        return array (  80 => 16,  76 => 15,  69 => 11,  65 => 10,  61 => 9,  52 => 3,  48 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -106,10 +124,22 @@ class __TwigTemplate_014a2ba2192885c61ede016737d8c43e extends Template
         return new Source("<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
     <div class=\"container\">
         <a class=\"navbar-brand\" href=\"{{ path('article_index') }}\">Gestion Articles</a>
-        <div class=\"navbar-nav\">
-            <a class=\"nav-link\" href=\"{{ path('article_index') }}\">Accueil</a>
-            <a class=\"nav-link\" href=\"{{ path('article_new') }}\">Nouvel article</a>
-            <a class=\"nav-link\" href=\"{{ path('new_category') }}\">Ajouter categorie</a>
+        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#main-nav\" aria-controls=\"main-nav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+            <span class=\"navbar-toggler-icon\"></span>
+        </button>
+        <div class=\"collapse navbar-collapse\" id=\"main-nav\">
+            <div class=\"navbar-nav me-auto\">
+                <a class=\"nav-link\" href=\"{{ path('article_index') }}\">Accueil</a>
+                <a class=\"nav-link\" href=\"{{ path('article_new') }}\">Nouvel article</a>
+                <a class=\"nav-link\" href=\"{{ path('new_category') }}\">Ajouter categorie</a>
+                <div class=\"nav-item dropdown\">
+                    <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Rechercher</a>
+                    <ul class=\"dropdown-menu\">
+                        <li><a class=\"dropdown-item\" href=\"{{ path('article_search_category') }}\">Par categorie</a></li>
+                        <li><a class=\"dropdown-item\" href=\"{{ path('article_search_price') }}\">Par prix</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </nav>

@@ -86,6 +86,8 @@ class __TwigTemplate_3d35e184b561140d54d8bc501999e161 extends Template
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
         // line 18
         yield "        </main>
+
+        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\"></script>
     </body>
 </html>
 ";
@@ -164,7 +166,7 @@ class __TwigTemplate_3d35e184b561140d54d8bc501999e161 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  125 => 17,  102 => 6,  88 => 18,  86 => 17,  83 => 16,  74 => 14,  70 => 13,  66 => 11,  64 => 10,  57 => 6,  50 => 1,);
+        return array (  127 => 17,  104 => 6,  88 => 18,  86 => 17,  83 => 16,  74 => 14,  70 => 13,  66 => 11,  64 => 10,  57 => 6,  50 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -187,6 +189,8 @@ class __TwigTemplate_3d35e184b561140d54d8bc501999e161 extends Template
 
             {% block body %}{% endblock %}
         </main>
+
+        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\"></script>
     </body>
 </html>
 ", "base.html.twig", "/app/templates/base.html.twig");

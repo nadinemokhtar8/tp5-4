@@ -11,6 +11,7 @@ return [
         '/' => [[['_route' => 'article_index', '_controller' => 'App\\Controller\\IndexController::index'], null, ['GET' => 0], null, false, false, null]],
         '/article/save' => [[['_route' => 'article_save_demo', '_controller' => 'App\\Controller\\IndexController::saveDemo'], null, ['GET' => 0], null, false, false, null]],
         '/article/new' => [[['_route' => 'article_new', '_controller' => 'App\\Controller\\IndexController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/category/newCat' => [[['_route' => 'new_category', '_controller' => 'App\\Controller\\IndexController::newCategory'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

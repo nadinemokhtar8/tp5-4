@@ -60,6 +60,10 @@ class __TwigTemplate_014a2ba2192885c61ede016737d8c43e extends Template
         // line 6
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_new");
         yield "\">Nouvel article</a>
+            <a class=\"nav-link\" href=\"";
+        // line 7
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("new_category");
+        yield "\">Ajouter categorie</a>
         </div>
     </div>
 </nav>
@@ -94,7 +98,7 @@ class __TwigTemplate_014a2ba2192885c61ede016737d8c43e extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  61 => 6,  57 => 5,  52 => 3,  48 => 1,);
+        return array (  65 => 7,  61 => 6,  57 => 5,  52 => 3,  48 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -105,6 +109,7 @@ class __TwigTemplate_014a2ba2192885c61ede016737d8c43e extends Template
         <div class=\"navbar-nav\">
             <a class=\"nav-link\" href=\"{{ path('article_index') }}\">Accueil</a>
             <a class=\"nav-link\" href=\"{{ path('article_new') }}\">Nouvel article</a>
+            <a class=\"nav-link\" href=\"{{ path('new_category') }}\">Ajouter categorie</a>
         </div>
     </div>
 </nav>

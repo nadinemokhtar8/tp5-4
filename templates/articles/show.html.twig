@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Détail article{% endblock %}
+{% block title %}Detail article{% endblock %}
 
 {% block body %}
     <div class="card shadow-sm">
         <div class="card-body">
-            <h1 class="h3 mb-4">Détail de l'article</h1>
+            <h1 class="h3 mb-4">Detail de l'article</h1>
 
             <dl class="row mb-4">
                 <dt class="col-sm-3">ID</dt>
@@ -16,6 +16,9 @@
 
                 <dt class="col-sm-3">Prix</dt>
                 <dd class="col-sm-9">{{ article.prix }}</dd>
+
+                <dt class="col-sm-3">Categorie</dt>
+                <dd class="col-sm-9">{{ article.category ? article.category.titre : 'Aucune' }}</dd>
             </dl>
 
             <div class="d-flex gap-2">

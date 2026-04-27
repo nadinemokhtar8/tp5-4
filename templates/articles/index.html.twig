@@ -6,7 +6,6 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <div>
             <h1 class="mb-1">Liste des articles</h1>
-            <p class="text-muted mb-0">TP4 Doctrine ORM et opérations CRUD</p>
         </div>
         <a href="{{ path('article_new') }}" class="btn btn-primary">Ajouter un article</a>
     </div>
@@ -19,6 +18,7 @@
                         <th>ID</th>
                         <th>Nom</th>
                         <th>Prix</th>
+                        <th>Categorie</th>
                         <th class="text-end">Actions</th>
                     </tr>
                 </thead>
@@ -28,6 +28,7 @@
                             <td>{{ article.id }}</td>
                             <td>{{ article.nom }}</td>
                             <td>{{ article.prix }}</td>
+                            <td>{{ article.category ? article.category.titre : 'Aucune' }}</td>
                             <td class="text-end">
                                 <a href="{{ path('article_show', {'id': article.id}) }}" class="btn btn-sm btn-outline-secondary">Voir</a>
                                 <a href="{{ path('article_edit', {'id': article.id}) }}" class="btn btn-sm btn-outline-primary">Modifier</a>
@@ -39,7 +40,7 @@
                         </tr>
                     {% else %}
                         <tr>
-                            <td colspan="4" class="text-center py-4 text-muted">Aucun article trouvé.</td>
+                            <td colspan="5" class="text-center py-4 text-muted">Aucun article trouve.</td>
                         </tr>
                     {% endfor %}
                 </tbody>
